@@ -27,10 +27,9 @@ console.log(findMin(minArray));
 
 // 4) Write a function named filterEvenNumbers that takes an array of numbers and returns a new array containing only the even numbers.
 let arrEven = [551, 22, 3, 14, 5.7, 6, 7, 8, 9, 228, 127.5];
-// let evenNumber = [];
+
 function filterEvenNumbers(arr) {
   let newArray = [];
-
   arr.map((x) => {
     if (x % 2 == 0) {
       newArray.push(x);
@@ -56,6 +55,7 @@ console.log(sortArrayDescending(arr));
 
 // 6) Write a function named lowercaseFirstLetter that takes a string and returns the same string with the first letter lowercased.
 let string = "Akib Mahamud";
+
 function lowercaseFirstLetter(string) {
   let newString = string.charAt(0).toLowerCase() + string.slice(1);
   return newString;
@@ -63,14 +63,14 @@ function lowercaseFirstLetter(string) {
 console.log(lowercaseFirstLetter(string));
 
 // 7) Write a function named countVowels that takes a string and returns the number of vowels (a, e, i, o, u, A, E, I, O, U) in the string. It should filter vowels from the string.
-let neweString = "We believe that what you read and write matters. Words can divide or empower us, inspire or discourage us. In a world where the most sensational and surface-level stories often win, were building a system that rewards depth, nuance, and time well spent. A space for thoughtful conversation more than drive-by takes, and substance over packaging."
+let newString = "We believe that what you read and write matters. Words can divide or empower us, inspire or discourage us. In a world where the most sensational and surface-level stories often win, we are building a system that rewards depth, nuance, and time well spent. A space for thoughtful conversation more than drive-by takes, and substance over packaging."
 
 function countVowels(string) {
   let vowels = 'aeiouAEIOU';
   let vowelsNumber = string.split('').filter(char => vowels.includes(char)).length;
   return vowelsNumber;
 }
-console.log(countVowels(neweString));
+console.log(countVowels(newString));
 
 // 8) Write a function named findAverage that takes an array of numbers and returns the average of all elements.
 let arrayAverage = [10, 20, 30, 0, 22, 35, 78, 96, 57, 15]
