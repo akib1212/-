@@ -41,14 +41,42 @@ function filterEvenNumbers(arr) {
 console.log(filterEvenNumbers(arrEven));
 
 // 5) Write a function named sortArrayDescending that takes an array of numbers and returns a new array sorted in descending order.
-let arr = [551, 22, 3, 14, 5.7, 6, 7, 8, 9, 228, 127.5,111];
+let arr = [551, 22, 3, 14, 5.7, 6, 7, 8, 9, 228, 127.5, 111];
 
 function sortArrayDescending(randomArray) {
   let descendingArray = [];
   function compare(a, b) {
-    return a - b;
+    return b - a;
   }
   descendingArray = randomArray.sort(compare);
   return descendingArray;
 }
 console.log(sortArrayDescending(arr));
+
+
+// 6) Write a function named lowercaseFirstLetter that takes a string and returns the same string with the first letter lowercased.
+let string = "Akib Mahamud";
+function lowercaseFirstLetter(string) {
+  let newString = string.charAt(0).toLowerCase() + string.slice(1);
+  return newString;
+}
+console.log(lowercaseFirstLetter(string));
+
+// 7) Write a function named countVowels that takes a string and returns the number of vowels (a, e, i, o, u, A, E, I, O, U) in the string. It should filter vowels from the string.
+let neweString = "We believe that what you read and write matters. Words can divide or empower us, inspire or discourage us. In a world where the most sensational and surface-level stories often win, were building a system that rewards depth, nuance, and time well spent. A space for thoughtful conversation more than drive-by takes, and substance over packaging."
+
+function countVowels(string) {
+  let vowels = 'aeiouAEIOU';
+  let vowelsNumber = string.split('').filter(char => vowels.includes(char)).length;
+  return vowelsNumber;
+}
+console.log(countVowels(neweString));
+
+// 8) Write a function named findAverage that takes an array of numbers and returns the average of all elements.
+let arrayAverage = [10, 20, 30, 0, 22, 35, 78, 96, 57, 15]
+function findAverage(arr) {
+  let sum = arr.reduce((acc, num) => acc + num, 0);
+  let average = sum / arr.length;
+  return average;
+}
+console.log(findAverage(arrayAverage));
